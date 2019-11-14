@@ -1,0 +1,253 @@
+/* 공통사항 */
+@import url('https://fonts.googleapis.com/css?family=Karma&display=swap');
+
+html, body {
+	font-family: 'Karma', serif;
+}
+.body {
+	height: 100%;
+}
+
+.wrap {
+	width: 100%;
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+/* tops */
+.header	{
+	position: fixed;
+	z-index: 9990;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.tops {
+	font-size: 24px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1180px;
+	background-color: white;
+}
+
+.tops > div {
+	padding: 16px;
+}
+
+/* .navi : bars icon */
+.tops > .navi {
+	float: left;
+	cursor: pointer;
+}
+
+.tops > .navi:hover {
+	background-color: #ccc;
+}
+
+.tops > .mail {
+	float: right;
+}
+
+.tops > .logo {
+	text-align: center;
+}
+
+.menu {
+	position: absolute;
+	z-index: 9999;
+	height: 100%;
+	width: 40%;
+	top: 0;
+	left: 0;
+	background-color: white;
+	color: black;
+	font-size: 1.5rem;
+	box-shadow: -5px 1px 10px rgba(-0,0,0,1);
+	display: none;
+}
+.menu > li {
+	padding: 1.5rem 1.5rem;
+	cursor: pointer;
+}
+.menu > li:hover {
+	background: #ddd;
+}
+
+/* foods */
+.foods > ul {
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.food {
+	text-align: center;
+	flex: 24% 0 1;
+	/* margin-right: 1%; */
+	margin-bottom: 1%;
+}
+	.food-tit {
+		font-size: 24px;
+		margin: 12px 0 16px 0;
+		color: black;
+		cursor: pointer;
+	}
+.food > .food-img {
+	overflow: hidden;
+	/* border: 1px solid blue; */
+} 
+.food-img > img:hover {
+	opacity: 0.5;
+	transition: all 1s;
+	transform: scale(1.1);
+}
+
+.pager {
+	width: 240px;
+	margin: 0 auto;
+}
+	.pager > li {
+		float: left;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		cursor: pointer;
+	}
+
+	.pager > li:hover {
+		background-color: #111;
+		color: #f8f8f8;
+	}
+
+	.pager > li:nth-child(2) {
+		background-color: #111;
+		color: #f8f8f8;
+	}
+	.pager > li:nth-child(2):hover {
+		background-color: #ccc;
+		color: #111;
+	}
+
+
+/* about */
+.about {
+	border-top: 1px solid #eee;
+	padding: 20px;
+	margin: 50px;
+	text-align: center;
+}
+.about > h2 {
+	font-weight: 100;
+	margin: 40px auto;
+ }
+/* .about > div > img {
+	animation-name: fadeInUp;
+	animation-delay: 2s;
+	animation-duration: 1.5s;
+} */
+
+.about > li {
+	margin-top: 20px;
+}
+
+.about > .profil-tit {
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+/* footer */
+.footers {
+	border-top: 1px solid #eee;
+	padding: 70px 20px;
+	margin: 50px 0;
+	/* border: 1px solid gray; */
+	display: flex;
+	justify-content: space-between; 
+}
+	.footers > .footer {
+			/* border: 1px solid gray; */
+		flex: 33.333% 0 1;
+	}
+	.footers > .footer:nth-child(2) {margin: 0 2%;}
+	.footers .ft-tit {
+		font-size: 17pt;
+		margin-bottom: 10pt;
+	}
+
+	.footers .post-1 {
+		padding: 20px 15px 12px 15px;
+		display: flex;
+		/* border: 1px solid gray; */
+	}
+		.footers .post-1:not(:last-child) {
+			border-bottom: 1px solid #ccc;
+		}
+ /* 또는 .post-cont > not:(:last-child) 라고 써도된다 */
+
+		.footers .post-1:hover {
+			background-color: #ccc;
+		}
+
+		.footers .post-1 > div:first-child {
+			width: 15%;
+			margin-right: 10px;
+		}
+		.footer .post-1 > div:last-child {
+			flex-grow: 1;
+		}
+		.footer .post-1 span {
+			font-size: 13pt;
+		}
+
+	.footer > .tags > span {
+		background-color: #555;
+		color: white;
+		font-size: 10pt;
+		padding: 2px 7px 0 7px;
+		line-height: 3;
+		font-weight: 100;
+	}
+
+	.footer > .tags > span:first-child {
+		background-color: black;
+		padding: 5px 10px 0 10px;
+	}
+	/* 혹은 span 대신 li tag로 걸고 display:inline-block으로 바꾸기 */
+
+
+	/* @media screen and (max-width: 768px) {
+		.food {
+			width: 48%;
+			margin: 1%;}
+	}
+	@media screen and (max-width: 480px) {
+		.food, 	.footers > .footer {
+			width: 96%;
+			margin: 2%;}
+	} */
+
+/* 태블릿 세로 */
+/* @media screen and (max-width: 992px) { */
+	
+/* } */
+/* 스마트폰 가로 */
+@media screen and (max-width: 768px) {
+	.foods > ul {
+		justify-content: space-evenly;
+	}	
+	.food {
+		flex: 48% 0 1;
+	}
+	.footers > .footer {
+		flex: 96% 0 1;
+	}
+}
+/* 스마트폰 세로 */
+
+@media screen and (max-width: 576px) {
+	.food {
+		flex: 96% 0 1;
+	}
+}

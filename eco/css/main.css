@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+/* font-family: 'Questrial', sans-serif; */
+/* 
+녹색 : #66a765
+갈색 : #a8714c
+#20f4db
+*/
+body, html {
+	font-family: 'Questrial', sans-serif;
+}
+
+.text-def {color: #66a765;}
+.text-sub {color: #a8714c;}
+.bg-def {background-color: #66a765;}
+.bg-sub {background-color: #a8714c;}
+
+.pt-serif {
+	font-family: 'Questrial', sans-serif;
+}
+.tip {
+	background-color: #111;
+	position: absolute;
+	padding: 6px 12px;
+	color: #f8f8f8;
+	font-size: 0.75rem;
+	width: 90px;
+	z-index: 9999;
+	border-radius: 4px;
+	left: -30px;
+	top: 30px;
+	transform: translateY(20px);
+	opacity: 0;
+	transition: all 0.5s;
+}
+.tip:after {
+	display: block;
+	content: '';
+	width: 10px;
+	height: 10px;
+	background-color: #111;
+	transform: rotate(45deg) translateX(-50%);
+	position: absolute;
+	top: 0;
+	left: 50%;
+}
+.top-sub {
+	position: absolute;
+	top: 60px; 
+	left: -30px; 
+	z-index: 9999;
+	display: flex;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+	border: solid 1px #ddd;
+	background: #fff; 
+	display: none;
+	opacity: 0;
+}
+.top-sub-col {width: 300px; min-height: 400px;}
+
+.slogan-icons > li:hover {color: #66a765;}
+
+.pager {position: absolute; z-index: 9999;}
+
+
+
+/* media */
+/* 0 ~ 575 - 스마트폰 세로 */
+.top-menu {display: block;}
+.logo-img {display: none;}
+.navi-wrap {display: none;}
+
+.banner-wrap {font-size: 1rem;} /* 8px */
+.banner-img {width: 120%; margin-left: -15%;}
+.banner-slogan { top: 2.5em;} 
+.banner-slogan > h1 {font-size: 2em;} /*주어진 수의 배수*/
+.banner-slogan > h4 {font-size: 1.5em; color: #a8714c;}
+.banner-slogan > p {font-size: 1em;}
+
+.item > li:first-child {
+	max-width: 70%;
+	margin: auto;
+}
+.item:hover {color:#66a765;}
+.item img {transition: all 1s;}
+.item-img-hover {transform: scale(1.2);}
+
+.ads-slogan {font-size: 0.25rem;} /*기준잡기*/
+.ads-slogan .tit {font-size: 3em;} /*0.5rem의 3.5배*/
+.ads-slogan .desc {font-size: 1.25em; margin: 1.25em 0;}
+.ads-slogan .btn {padding: 0.5em 1em;}
+
+.popular-wrap .prd {flex: 98% 0 0;}
+.popular-wrap .prd-title {transition: all 1s;}
+.popular-wrap .prd-title:hover {color: #66a765;}
+.popular-wrap .btn-success {background-color: #66a765;}
+.popular-wrap .btn-success:hover {
+	color: #fff;
+	background-color: #a8714c;
+	border-color: #a8714c;
+}
+.popular-wrap .prd-icon {
+	position: absolute;
+	background: rgba(250, 245, 235, 0.9);
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 50%;
+	right: 1rem;
+	transition: all 0.7s;
+	opacity: 0;
+}
+.popular-wrap .prd-icon:hover {
+	color: #f8f8f8;
+	background-color: #66a765;
+}
+.popular-wrap .prd-view {top: 1rem;}
+.popular-wrap .prd-login {top: 5rem;}
+.popular-wrap .prd-compare {top: 9rem;}
+
+.media-body > h3:hover {
+	color:#66a765;
+	transition: all 0.3s;
+}
+
+.footer-wrap {
+	background-color: #e0f4db;
+}
+.footer-wrap .list {color: #a8714c;}
+.footer-wrap .list:hover {color: #66a765;}
+.footer-wrap i {color: #66a765;}
+.footer-wrap i:hover {color: #111;}
+.footer-wrap .btn {background-color: #66a765; border-color: lightgray;}
+.footer-wrap .btn:hover {background-color: #111;}
+.footer-wrap .list {display: none;}
+.footer-wrap .title {
+	border-bottom: 1px solid #66a765;
+	cursor: pointer;
+}
+.footer-wrap .title:hover {color: #66a765;}
+
+.bt-top {
+	position: fixed; 
+	bottom: -4.5rem; 
+	right:0; 
+	z-index: 9999;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	transition: all 0.5s;
+	background-color: #66a765;
+}
+.bt-top:hover {
+	background-color: #a8714c;	
+	padding: 0.7rem 1.5rem 1.3rem 1.5rem;
+}
+.bt-top-show {
+	transform: translateY(-7rem);
+}
+
+
+/* 576 ~ 767 - sm - 스마트폰 가로 */
+@media screen and (min-width: 576px) {
+	.item > li:first-child {max-width: 100%;}
+	.ads-slogan {font-size: 0.5rem;}
+	.popular-wrap .prd {flex: 49% 0 0;}
+}
+
+/* 768 ~ 991 - md - 태블릿 세로 */
+@media screen and (min-width: 768px) {
+	.banner-wrap {font-size: 1.25rem;} /*  */
+	.ads-slogan {font-size: 0.75rem;}
+	.popular-wrap .prd {flex: 32% 0 0;}
+	.footer-wrap .list {display: block;}
+	.footer-wrap .title {
+		border-bottom: none; 
+		cursor: text;
+		}
+		.footer-wrap .title:hover {color: inherit;}
+		.footer-wrap .title > span {display: none;}
+}
+
+/* 992 ~ 1199 - lg - PC */
+@media screen and (min-width: 992px) {
+	.top-menu {display: none;}
+	.logo-img {display: inline-block;}
+	.navi-wrap {display: flex;}
+	.banner-wrap {font-size: 1.5rem;} /* px */
+	.ads-slogan {font-size: 1rem;}
+	.popular-wrap .prd {flex: 24% 0 0;}
+}
+
+/* 1200 ~ xl */
+@media screen and (min-width: 1200px) {
+
+}
+

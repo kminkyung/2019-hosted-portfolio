@@ -1,0 +1,34 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Noto+Sans+KR&display=swap');
+
+html, body {
+margin: 0;
+padding: 0;
+color: #222222;
+background-color: #fbf8f2
+}
+
+.mn-tit {
+background-color: darkslategray;
+color: antiquewhite;
+text-align: center;
+font-family: 'Black Han Sans', sans-serif;
+font-size: 36px;
+padding: 20px;
+}
+
+.ban {
+background-color: beige;
+border: 2px solid #222222;
+padding: 20px;
+margin: 20px;
+font-family: 'Noto Sans KR', sans-serif;
+}
+
+.summary {
+padding: 20px;
+text-align: center;
+font-family: 'Black Han Sans', sans-serif;
+font-size: 30px;
+color: rgb(13, 65, 65);
+}
