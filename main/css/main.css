@@ -158,7 +158,7 @@ nav {
 .portfolio-main {
 	background-color: #fff;
 	position: relative;
-	padding: 12vw 0;
+	padding: 12vw 2vw;
 	font-size: 1.2rem;
 	transition: all 1s;
 	width: 100%;
@@ -305,7 +305,7 @@ a.work-desc:hover{
 
 @media screen and (max-width: 1679px) {
 	.weather-video-wrap {
-		top: 3.1vw;
+		top: 2.9vw;
 	}
 }
 
@@ -313,10 +313,16 @@ a.work-desc:hover{
 	.weather-video-wrap {
 		top: 3.1vw;
 	}
+	.weather-video-wrap > .weather-video {
+		width: 101%;
+	}
 }
 @media screen and (max-width: 1400px) {
 	.weather-video-wrap {
-		top: 3.5vw;
+		top: 3.3vw;
+	}
+	.portfolio-main {
+		padding: 14vw 8vw;
 	}
 }
 
@@ -335,14 +341,17 @@ a.work-desc:hover{
 		font-size: 1.25vw;
 	}
 	.weather-video-wrap {
-		top: 3.8vw;
+		top: 3.1vw;
+	}
+	.weather-video-wrap .weather-video {
+		width: 101%;
 	}
 	.portfolio-main {
-		padding: 16vw 0;
+		padding: 16vw 8vw;
 	}
 	.about-page {
-		background-position: 100% 90%;
-		background-size: 60%;
+		background-position: 100% 170%;
+		background-size: 55%;
 	}
 	.contact {
 		font-size: 3.6vw;
@@ -382,8 +391,8 @@ a.work-desc:hover{
 		padding: 0 4vw;
 	}
 	.about-page {
-		background-position: 100% 100%;
-		background-size: 70%;
+		background-position: 100% 120%;
+		background-size: 60%;
 	}
 	.contact {
 		margin-top: 8vw;
@@ -401,14 +410,20 @@ a.work-desc:hover{
 	}
 	.caption {
 		position: static;
-		padding: 1.5rem;
+		padding: 2vw;
+		margin-top: 5vw;
+	}
+	.about-page {
+		background-position: 100% 80%;
+		background-size: 60%;
 	}
 	.about-cont {
-		font-size: 6vw;
+		font-size: 5vw;
 	}
 	/* .about-cont:nth-child(2) {
 		margin-top: 0; 
 	} */
+	
 	.contact {
 		font-size: 4.4vw;
 	}
