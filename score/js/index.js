@@ -7,7 +7,7 @@
 var html = '';
 
 var scoreURL = {
-	site: "http://webmir.co.kr/score",
+	site: "php",
 	cURL: "/score_in.php",
 	rURL: "/score_li.php",
 	uURL: "/score_up.php",
@@ -125,14 +125,14 @@ function saveData(bt, id) {
 			if ($input.eq(i).val() == "") {
 				alert(comment[i] + "입력해주세요.");
 				$input.eq(i).focus();
-				return;
+				return false;
 			}
 		}
 		else { //stdname 이 아닌 경우
 			if ($.trim($input.eq(i).val()) == "" || Number($input.eq(i).val()) < 0 || Number($input.eq(i).val()) > 100) {
 				alert(comment[i] + "입력하세요.");
 				$input.eq(i).focus();
-				return;
+				return false;
 			}
 		}
 	}
@@ -143,7 +143,6 @@ function saveData(bt, id) {
 		eng: $input.eq(2).val(),
 		math: $input.eq(3).val()
 	};
-
 	//id가 0이면 그냥 초기설정score_li.php 에 보내고(새로저장), 아니면 id값을 넣어서 보낸다.(수정)
 	if(id > 0) {
 		url = scoreURL.getURL('U'); //score_li.php에서 score_up.php 로 교체
@@ -237,8 +236,8 @@ function delData(bt, id) {
 
 // 페이저 생성
 function pagerMaker(total, page) {
-	var div = 4; //세트 당 나올 페이지 수 
-	var cnt = Math.ceil(total / 10); //전체 페이지 개수
+	var div = 5; //세트 당 나올 페이지 수 
+	var cnt = Math.ceil(total / div); //전체 페이지 개수
 	var stn = 0; //세트 중 시작 페이지
 	var edn = 0; //세트 중 마지막 페이지
 	var prev = 0; // < 를 클릭시 나타날 페이지
@@ -264,12 +263,12 @@ function pagerMaker(total, page) {
 		next = edn + 1;
 	}
 
-	console.log("stn:" + stn);
+/* 	console.log("stn:" + stn);
 	console.log("edn:" + edn);
 	console.log("lastIndex:" + lastIndex);
 	console.log("nowIndex:" + nowIndex);
 	console.log("next:" + next);
-
+ */
 	html = '<li class="page-item page-first ' + (prevShow ? "" : "disabled") + '" data-page="' + first + '">';
 	html += '<span class="page-link">';
 	html += '<i class="fas fa-angle-double-left"></i>';
