@@ -98,13 +98,13 @@ nav {
 	top: 50%;
 	transform: translateY(-50%);
 	padding: 0 1.5vw;
-	cursor: pointer;
 }
 .menu-sub.left{
 	left: -100%;
 }
 .menu-sub.right {
 	right: -100%;
+	cursor: pointer;
 }
 
 

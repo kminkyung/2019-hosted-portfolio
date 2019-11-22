@@ -1,4 +1,6 @@
 // Global
+var clickChk = true;
+
 $(document).ready(function(){
 	$(".navi").eq(1).css({"top":"-200%"}, 500);
 	$(".navi").eq(2).css({"top":"-200%"}, 500);
@@ -6,26 +8,32 @@ $(document).ready(function(){
 })
 
 /* NAVIGATION */
+
 // Portfolio
 $(".portfolio").off("click").click(function(){
 	// var fontSize = $(this).next().css("font-size");
 	// console.log(fontSize);
-	$(window).scrollTop(0);
-	$("body").css({"overflow":"initial"});
-	$(".navi").eq(0).stop().animate({"height":"78px"}, 500);
-	$(this).stop().animate({"font-size":"2.25vw"}, 500);
-	$(".navi").eq(1).stop().animate({"top":"100%"}, 500);
-	$(".navi").eq(2).stop().animate({"top":"100%"}, 500);
-	$(this).parent().children(".left").animate({"left":0}, 500);
-	$(this).parent().children(".right").animate({"right":0}, 500, function(){
-		$("nav").css({"height":"78px", "overflow":"hidden"});
-		$(window).trigger("resize");
-	});
-	$(".portfolio-page").css("display","block");
-	$(".about-page").css("display","none");
-	$(".work-page").css("display","none");
-	$("footer").css("display","block");
+	if(clickChk == true) {
+		clickChk = false;
+		$(window).scrollTop(0);
+		$("body").css({"overflow":"initial"});
+		$(".navi").eq(0).stop().animate({"height":"78px"}, 500);
+		$(this).stop().animate({"font-size":"2.25vw"}, 500);
+		$(".navi").eq(1).stop().animate({"top":"100%"}, 500);
+		$(".navi").eq(2).stop().animate({"top":"100%"}, 500);
+		$(this).parent().children(".left").animate({"left":0}, 500);
+		$(this).parent().children(".right").animate({"right":0}, 500, function(){
+			$("nav").css({"height":"78px", "overflow":"hidden"});
+			$(window).trigger("resize");
+			clickChk = true;
+		});
+		$(".portfolio-page").css("display","block");
+		$(".about-page").css("display","none");
+		$(".work-page").css("display","none");
+		$("footer").css("display","block");
+	}
 });
+
 // Portfolio - Menu
 $(".navi-pf").children(".right").off("click").click(function(){
 	$("body").css({"overflow":"hidden"});
@@ -40,26 +48,32 @@ $(".navi-pf").children(".right").off("click").click(function(){
 
 // About
 $(".about").off("click").click(function(){
-	$(window).scrollTop(0);
-	// var aboutHeight = $(".about").css("height").replace("px", "");
-	$("body").css({"overflow":"initial"});
-	$(".navi").eq(0).stop().animate({"top":"-300%"}, 500)
-	$(".navi").eq(1).stop().animate({"top":"-34%", "height":"78px"}, 500);
-	$(".navi").eq(2).stop().animate({"top":"1000px"}, 500);
-	$(".about").stop().animate({"font-size":"2.25vw"}, 500);
-	$(".about-page").css({"display":"block", "z-index":"999"});
-	$(this).parent().children(".left").animate({"left":0}, 500);
-	$(this).parent().children(".right").animate({"right":0}, 500, function(){
-		$("nav").css({"height":"78px", "overflow":"hidden"});
-		$(".about-wrap .about-cont").stop().animate({"opacity":1, "top":0}, 400, function(){
-			$(".about-wrap .contact").stop().animate({"opacity":1, "top":0}, 400);
-			$(window).trigger("resize");
+	if(clickChk == true) {
+		clickChk = false;
+		$(window).scrollTop(0);
+		// var aboutHeight = $(".about").css("height").replace("px", "");
+		$("body").css({"overflow":"initial"});
+		$(".navi").eq(0).stop().animate({"top":"-300%"}, 500)
+		$(".navi").eq(1).stop().animate({"top":"-34%", "height":"78px"}, 500);
+		$(".navi").eq(2).stop().animate({"top":"1000px"}, 500);
+		$(".about").stop().animate({"font-size":"2.25vw"}, 500);
+		$(".about-page").css({"display":"block", "z-index":"999"});
+		$(this).parent().children(".left").animate({"left":0}, 500);
+		$(this).parent().children(".right").animate({"right":0}, 500, function(){
+			$("nav").css({"height":"78px", "overflow":"hidden"});
+			$(".about-wrap .about-cont").stop().animate({"opacity":1, "top":0}, 400, function(){
+				$(".about-wrap .contact").stop().animate({"opacity":1, "top":0}, 400);
+				$(window).trigger("resize");
+				clickChk = true;
+			});
 		});
-	});
-	$(".portfolio-page").css("display","none");
-	$(".work-page").css("display","none");
-	$("footer").css("display","none");
+		$(".portfolio-page").css("display","none");
+		$(".work-page").css("display","none");
+		$("footer").css("display","none");
+	}
+
 });
+
 // About - Menu
 $(".navi-ab").children(".right").off("click").click(function(){
 	$("body").css({"overflow":"hidden"});
@@ -72,24 +86,31 @@ $(".navi-ab").children(".right").off("click").click(function(){
 	$(this).parent().children(".right").animate({"right":"-100%"}, 500);
 });
 
+
 // Work
 $(".work").off("click").click(function(){
-	$(window).scrollTop(0);
-	$("body").css({"overflow":"initial"});
-	$(".navi").eq(0).stop().animate({"top":"-300%"}, 500)
-	$(".navi").eq(1).stop().animate({"top":"-170%"}, 500);
-	$(".navi").eq(2).stop().animate({"top": "-68%", "height":"78px"}, 500);
-	$(".work").stop().animate({"font-size":"2.25vw"}, 500);
-	$(this).parent().children(".left").animate({"left":0}, 500);
-	$(this).parent().children(".right").animate({"right":0}, 500, function(){
-		$("nav").css({"height":"78px", "overflow":"hidden"});
-		$(window).trigger("resize");
-	});
-	$(".about-page").css("display","none");
-	$(".portfolio-page").css("display","none");
-	$(".work-page").css("display","block");
-	$("footer").css("display","block");
+	if(clickChk == true) {
+		clickChk = false;
+		$(window).scrollTop(0);
+		$("body").css({"overflow":"initial"});
+		$(".navi").eq(0).stop().animate({"top":"-300%"}, 500)
+		$(".navi").eq(1).stop().animate({"top":"-170%"}, 500);
+		$(".navi").eq(2).stop().animate({"top": "-68%", "height":"78px"}, 500);
+		$(".work").stop().animate({"font-size":"2.25vw"}, 500);
+		$(this).parent().children(".left").animate({"left":0}, 500);
+		$(this).parent().children(".right").animate({"right":0}, 500, function(){
+			$("nav").css({"height":"78px", "overflow":"hidden"});
+			$(window).trigger("resize");
+			clickChk = true;
+		});
+		$(".about-page").css("display","none");
+		$(".portfolio-page").css("display","none");
+		$(".work-page").css("display","block");
+		$("footer").css("display","block");
+	}
+
 });
+
 // Work - Menu
 $(".navi-wk").children(".right").off("click").click(function(){
 	$("body").css({"overflow":"hidden"});
